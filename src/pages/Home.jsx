@@ -23,7 +23,7 @@ const HomePage = () => {
             </section>
             <section className=" w-screen mt-[56px] md:mt-[63px]">
                 <div className="pl-[28px] pr-[27px] md:pl-[77px] md:pr-[57px]">
-                    <span>Search</span>
+                    <span className="text-search-mobile md:text-search-large mb-1">Search</span>
                     <input
                         type="text"
                         className=" w-full border border-black h-[34px] md:h-[54px] px-4"

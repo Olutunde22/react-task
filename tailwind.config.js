@@ -16,6 +16,14 @@ module.exports = {
           letterSpacing: '-0.05em',
           fontWeight: '700',
         }],
+        'search-mobile': ['1rem', {
+          lineHeight: '1.3125rem',
+          fontWeight: '400',
+        }],
+        'search-large': ['1.5rem', {
+          lineHeight: '1.9375rem',
+          fontWeight: '400',
+        }],
       },
       backgroundImage: theme => ({
         'landing': "url(assets/background.png)"
