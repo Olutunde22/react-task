@@ -4,15 +4,19 @@ export const movieApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getMovies: builder.query({
             query: () => ({
-                url: "",
+                url: `?apikey=${process.env.REACT_APP_API_KEY}&s=marvel`,
                 method: 'GET',
             }),
+            transformResponse: (response) => response.Search, 
+            providesTags: ['Movie']
         }),
-        searchMovies: builder.mutation({
+        searchMovies: builder.query({
             query: ({ title }) => ({
-                url: `&t=${title}`,
+                url: `?apikey=${process.env.REACT_APP_API_KEY}&s=${title}`,
                 method: "GET",
             }),
+            transformResponse: (response) => response.Search,
+            providesTags: ['Movie']
         }),
     }),
 });
